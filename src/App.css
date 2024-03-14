@@ -34,6 +34,7 @@
   display: flex;
 }
 
+
 .login-button,
 .logout-button {
   background-color: #4CAF50; /* Green */
@@ -45,6 +46,8 @@
   display: inline-block;
   font-size: 16px;
   margin-left: 10px;
+  /* margin:'10px';
+  justify-content: space-between; */
 }
 
 .login-button:hover,

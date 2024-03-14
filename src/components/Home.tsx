@@ -55,7 +55,8 @@ useEffect(()=>{
   }, 3000);
 },[isDownloading])
   return (
-    <div ref={targetRef}>
+    <>
+    {localStorage.getItem('authToken') ? <div ref={targetRef}>
       <h3 className="Invoice-heading" >Bill(levitnation - Invoice)</h3>
       {IsAddProduct? <AddProduct tableEntry={tableEntry} setTableEntry={setTableEntry} setIsAddProduct={setIsAddProduct}/>:<Table tableEntry={tableEntry}/>}
       {!IsAddProduct && <div className='sell-detail table-container'>
@@ -80,7 +81,8 @@ useEffect(()=>{
         </div>
       </div>}
       
-    </div>
+    </div>:<h2 style={{width:'20%',margin:'auto',marginTop:'20px'}}>Please login....</h2>}
+    </>
   );
 };
 

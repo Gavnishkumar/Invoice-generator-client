@@ -17,6 +17,7 @@ const Navbar: React.FC = () => {
         setIsLoggedIn(true)
      }
    },[isLoggedIn,navigate,data])
+   
    const onLogout=()=>
    {
     if(localStorage.getItem('authToken')){
@@ -50,7 +51,7 @@ const Navbar: React.FC = () => {
         {isLoggedIn ? (
           <button className="logout-button" onClick={onLogout}>Logout</button>
         ) : (
-            <div >
+            <div style={{display:'flex'}}>
           <button className="login-button" onClick={onLogin}>Login</button>
           <button className="login-button" onClick={onSignUp}>SignUp</button>
           </div>
