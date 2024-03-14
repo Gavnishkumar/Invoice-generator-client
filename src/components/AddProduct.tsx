@@ -69,7 +69,7 @@ const AddProduct: React.FC<ProductProps> = (props) => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '72vh' }}>
       <div className="signup-container">
         <h1>Add New Product</h1>
         <form className="signup-form">
@@ -96,7 +96,7 @@ const AddProduct: React.FC<ProductProps> = (props) => {
               placeholder="Quantity"
               required
             />
-            {!isValidQuantity && <p style={{ color: 'red' }}>Invalid email address</p>}
+            {!isValidQuantity && <p style={{ color: 'red' }}>Invalid quantity(must be greater than 0)</p>}
             
           </div>
           <div className="form-group">
@@ -105,12 +105,11 @@ const AddProduct: React.FC<ProductProps> = (props) => {
               type="number"
               id="price"
               name="price"
-              // value={productPrice}
               onChange={handleProductPrice}
               placeholder="Price of product"
               required
             />
-            {!isValidPrice && <p style={{ color: 'red' }}>Invalid email address</p>}
+            {!isValidPrice && <p style={{ color: 'red' }}>Invalid price</p>}
           </div>
           <div className='AddProduct-form-btn'>
             <div className='inner-button'>

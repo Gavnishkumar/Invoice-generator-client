@@ -50,13 +50,13 @@ const SignUp: React.FC = () => {
       navigate('/')
     })
     .catch((error) => {
-      console.error('Error fetching data:', error);
+      alert(error.response.data.msg)
     });
     
   };
 
   return (
-    <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100vh'}}>
+    <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'72vh'}}>
     <div className="signup-container">
       <h1>Login</h1>
       <form className="signup-form" onSubmit={handleSubmit}>
