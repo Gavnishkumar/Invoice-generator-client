@@ -5,10 +5,10 @@ import { Link, useNavigate } from 'react-router-dom';
 const SignUp: React.FC = () => {
   const navigate= useNavigate();
   useEffect(()=>{
-    if(localStorage.getItem('authToken')){
+    if(localStorage.getItem('authToken')!==null){
       navigate('/')
     }
-  })
+  },[navigate])
   interface User {
     name: string,
     email: string,
@@ -59,8 +59,6 @@ const SignUp: React.FC = () => {
       email: formData.email,
       password: formData.password
     }
-   
-  
     axios.post<UserData>('https://invoice-generator-backend-lf5d.onrender.com/api/user/signup',{params: userRequest})
       .then((response: AxiosResponse<UserData>) => {
         navigate('/login')
@@ -69,7 +67,6 @@ const SignUp: React.FC = () => {
         console.error('Error fetching data:', error);
       });
   };
-
   return (
     <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100vh'}}>
     <div className="signup-container">

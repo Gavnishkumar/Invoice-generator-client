@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
    useEffect(() => {
      if(!localStorage.getItem('authToken')){
         setIsLoggedIn(false)
-        navigate('/login')
+        // navigate('/login')
      }
      else{
         setIsLoggedIn(true)
@@ -28,6 +28,9 @@ const Navbar: React.FC = () => {
    const onLogin=()=>{
     setIsLoggedIn(true)
     navigate('/login')
+   }
+   const onSignUp=()=>{
+    navigate('/signup')
    }
   return (
     <nav className="navbar">
@@ -47,7 +50,10 @@ const Navbar: React.FC = () => {
         {isLoggedIn ? (
           <button className="logout-button" onClick={onLogout}>Logout</button>
         ) : (
+            <div >
           <button className="login-button" onClick={onLogin}>Login</button>
+          <button className="login-button" onClick={onSignUp}>SignUp</button>
+          </div>
         )}
       </div>
     </nav>

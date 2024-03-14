@@ -5,11 +5,12 @@ import axios,{AxiosResponse} from 'axios';
 const SignUp: React.FC = () => {
   const [isValidEmail,setIsValidEmail]= useState<boolean>(true);
   const navigate=useNavigate();
+  let token:string|null=localStorage.getItem('authToken');
   useEffect(()=>{
     if(localStorage.getItem('authToken')){
       navigate('/')
     }
-  })
+  },[token,navigate])
     interface UserInterface {
         email: string,
         password: string
