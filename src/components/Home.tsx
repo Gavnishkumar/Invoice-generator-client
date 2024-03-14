@@ -57,7 +57,7 @@ useEffect(()=>{
   return (
     <>
     {localStorage.getItem('authToken') ? <div ref={targetRef}>
-      <h3 className="Invoice-heading" >Bill(levitnation - Invoice)</h3>
+      <h3 className="Invoice-heading" >Bill(levitation - Invoice)</h3>
       {IsAddProduct? <AddProduct tableEntry={tableEntry} setTableEntry={setTableEntry} setIsAddProduct={setIsAddProduct}/>:<Table tableEntry={tableEntry}/>}
       {!IsAddProduct && <div className='sell-detail table-container'>
         <div className='bottom-section' style={{display:'flex',flexDirection:'column'}}>
