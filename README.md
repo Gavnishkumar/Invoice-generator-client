@@ -39,8 +39,39 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Setup complete
+# Invoice Generator Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Backend Setup
+1. Clone the backend repository(https://github.com/Gavnishkumar/Invoice-generator-backend):
+   ## git clone <https://github.com/Gavnishkumar/Invoice-generator-backend>
+2. Navigate into the project directory:
+   ## cd <backend-project-directory>
+3. Install dependencies:
+   ## npm install
+4. Start the backend server:
+   ## node app.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Frontend Setup
+1. Clone the frontend repository:
+   ## git clone https://github.com/Gavnishkumar/Invoice-generator-client
+2. Navigate into the project directory:
+   ## cd <frontend-project-directory>
+3. Update the request link in the frontend code to point to your backend server.
+4. Install dependencies:
+   ## npm install
+8. Start the development server:
+   ## npm start
+
+## Additional Libraries or Tools Used
+- **Backend**:
+- Express.js
+- Other dependencies as required for your backend functionality.
+
+- **Frontend** (Create React App with TypeScript):
+- React
+- TypeScript
+- react-router-dom
+- axios
+- Other dependencies as required for your frontend functionality.
+
